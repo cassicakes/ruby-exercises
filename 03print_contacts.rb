@@ -12,8 +12,15 @@
 #
 # Use the contacts below
 
+def print_contacts(contacts)
+  contacts.each do | contact, phone | # contact represents key ... and phone reprsents value
+    puts "#{contact} has a phone number of #{phone}"
+  end
+end
+
 contacts = {
-  :Brian => "333-333-3333",
+  :Brian => "333-333-3333", #:Brian is a SYMBOL not a string cause of :
   :Lenny => "444-444-4444",
   :Daniel => "777-777-7777"
 }
+ print_contacts(contacts)
